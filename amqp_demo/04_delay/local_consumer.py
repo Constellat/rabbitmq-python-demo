@@ -28,7 +28,7 @@ def main():
         # print(properties.headers.get('x-delay'))
         print(message.properties.get('application_headers',{}).get('x-delay', 0))
         print('Received message (routing_key: {}): {}'.format(
-            message.delivery_info.get('exchange', ''),
+            message.delivery_info.get('routing_key', ''),
             message.body
         ))
         print(datetime.now())

@@ -33,7 +33,7 @@ def main():
     def on_message(message):
         print(" [x] Received %s: %s" % (message.delivery_info.get('routing_key'), message.body))
         print('Received message (routing_key: {}): {}'.format(
-            message.delivery_info.get('exchange', ''),
+            message.delivery_info.get('routing_key', ''),
             message.body
         ))
         print(" [x] Done")
