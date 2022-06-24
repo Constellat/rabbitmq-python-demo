@@ -14,6 +14,8 @@ def main():
 
     # 第一条消息将只包含一个字符串Hello World！
     message = amqp.Message('Hello World')
+    # delivery_mode: Non-persistent(1) or persistent(2)
+    message.properties['delivery_mode'] = 2
     channel.basic_publish(msg=message, exchange='logs', routing_key='')
     print(" [x] Sent %s" % message.body)
 
