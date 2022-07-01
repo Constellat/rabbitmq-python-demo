@@ -15,14 +15,11 @@ https://rabbitmq.com/getstarted.html
 
 ### 1. "Hello World!"
 
-- Producing means nothing more than sending. A program that sends messages is a producer :
+- A program that sends messages is a producer :
   ![](./static/producer.png)
-- A queue is the name for a post box which lives inside RabbitMQ. Although messages flow through RabbitMQ and your
-  applications, they can only be stored inside a queue. This is how we represent a queue:
-    - A queue is only bound by the host's memory & disk limits, it's essentially a large message buffer.
-    - Many producers can send messages that go to one queue, and many consumers can try to receive data from one queue.
-      ![](./static/queue.png)
-- Consuming has a similar meaning to receiving. A consumer is a program that mostly waits to receive messages:
+- This is how we represent a queue:
+  ![](./static/queue.png)
+- A consumer is a program that mostly waits to receive messages:
   ![](./static/consumer.png)
 
 Our overall design will look like:
