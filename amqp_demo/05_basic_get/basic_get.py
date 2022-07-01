@@ -42,7 +42,7 @@ def main():
         try:
             # 消费一条消息，消费逻辑放在 on_message()
             result = channel.basic_get(queue=queue_name, no_ack=False)
-
+            print(result)
             if result:
                 print('Received message (routing_key: {}): {}'.format(
                     result.delivery_info.get('routing_key', ''),
